@@ -12,6 +12,7 @@
         <input type="text" id="passwordBox" placeholder="Password">
         <img src="images/copy.png" onclick="copyPassword()">
       </div>
+      <div class="OptionsAndCreate">
       <button onclick="createPassword()">Generate Password</button>
 	  <input type="checkbox" id="UpperCase" name="UpperCase" value="UpperCase">
 	  <label for="UpperCase">UpperCase</label>
@@ -22,6 +23,7 @@
 	  <input type="checkbox" id="Symbols" name="Symbols" value="Symbols">
 	  <label for="Symbols">Symbols</label>
 	  <input type="number" id="Length" placeholder="Length of Password">
+      </div>
       </div>
     <script>
       const passwordBox = document.getElementById("passwordBox");
@@ -93,6 +95,7 @@
 		console.log(allChars);
         
 		allChars = "";
+	        length = 15;
 		
       }
 
