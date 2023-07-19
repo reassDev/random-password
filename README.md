@@ -6,6 +6,6 @@ Boom you have a secure password.
 
 In the future I will be updating the looks of the customization options, as currently they are just the ugly base HTML ones.
 
-Demo of the Website is at: [https://reassignment.github.io/random-password/](url)
+[Click here for the Demo of the Password Generator Website](https://www.nuget.org/packages/PasswordGenerator)
 
 Very easy to set up for yourself, just fork the project and set up github pages, or download the files and run the index.html file.
