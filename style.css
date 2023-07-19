@@ -30,8 +30,8 @@ body {
   font-size: 45px;
 }
 .container h1 span {
-  color: #019f55;
-  border-bottom: 4px solid #019f55;
+  color: #0015ff;
+  border-bottom: 4px solid #0015ff;
   padding-bottom: 7px;
 }
 .display img {
@@ -50,7 +50,7 @@ body {
 .container button {
   border: 0;
   outline: 0;
-  background: #019f55;
+  background: #0015ff;
   color: #fff;
   font-size: 22px;
   font-weight: 300;
