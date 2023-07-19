@@ -13,6 +13,14 @@
         <img src="images/copy.png" onclick="copyPassword()">
       </div>
       <button onclick="createPassword()">Generate Password</button>
+	  <input type="checkbox" id="UpperCase" name="UpperCase" value="UpperCase">
+	  <label for="UpperCase">UpperCase</label>
+	  <input type="checkbox" id="LowerCase" name="LowerCase" value="LowerCase">
+	  <label for="LowerCase">LowerCase</label>
+	  <input type="checkbox" id="Numbers" name="Numbers" value="Numbers">
+	  <label for="Numbers">Numbers</label>
+	  <input type="checkbox" id="Symbols" name="Symbols" value="Symbols">
+	  <label for="Symbols">Symbols</label>
     </div>
         
       </div>
@@ -20,28 +28,74 @@
       const passwordBox = document.getElementById("passwordBox");
 
       const length = 15;
-
+	  
+	  const upperCaseBox = document.getElementById("UpperCase");
+	  const lowerCaseBox = document.getElementById("LowerCase");
+	  const numberBox = document.getElementById("Numbers");
+	  const symbolBox = document.getElementById("Symbols");
+	  
+	  upperCaseBox.checked = true;
+	  lowerCaseBox.checked = true;
+	  numberBox.checked = true;
+	  symbolBox.checked = true;
+	  
+	  upperCaseChecked = true;
+	  lowerCaseChecked = true;
+	  numberChecked = true;
+	  symbolChecked = true;
+	  
       const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 
       const number = "0123456789";
 
       const symbols = "=-/<>[]{}|~+_)(*&^@#$%";
+	  
+	  let allChars = "";
+	  
+	  upperCaseBox.addEventListener('change', function(){upperCaseChecked = this.checked})
+	  lowerCaseBox.addEventListener('change', function(){lowerCaseChecked = this.checked})
+	  numberBox.addEventListener('change', function(){numberChecked = this.checked})
+	  symbolBox.addEventListener('change', function(){symbolChecked = this.checked})
 
-      const allChars = upperCase + lowerCase + number + symbols;
+	  
+	  
       
       function createPassword(){
         let password = "";
+		if (upperCaseChecked == true) {
+			allChars += upperCase;
+		}
+		if (lowerCaseChecked == true) {
+			allChars += lowerCase;
+		}
+		if (numberChecked == true) {
+			allChars += number;
+		}
+		if (symbolChecked == true) {
+			allChars += symbols;
+		}
+		if (upperCaseChecked == true) {
         password += upperCase[Math.floor(Math.random() * upperCase.length)];
+		}
+		if (lowerCaseChecked == true) {
         password += lowerCase[Math.floor(Math.random() * lowerCase.length)];
+		}
+		if (numberChecked == true) {
         password += number[Math.floor(Math.random() * number.length)];
+		}
+		if (symbolChecked == true) {
         password += symbols[Math.floor(Math.random() * symbols.length)];
+		}
 
         while(length > password.length) {
           password += allChars[Math.floor(Math.random() * allChars.length)];
         }
         passwordBox.value = password;
+		console.log(allChars);
         
+		allChars = "";
+		
       }
 
       function copyPassword(){
