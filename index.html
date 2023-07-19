@@ -13,10 +13,15 @@
         <img src="images/copy.png" onclick="copyPassword()">
       </div>
       <button onclick="createPassword()">Generate Password</button>
+      <input type="number" id="lengthBox" placeholder="Length">
     </div>
+        
+      </div>
     <script>
       const passwordBox = document.getElementById("passwordBox");
-      const length = 15;
+      const lengthBox = document.getElementById("lengthBox");
+
+      const length = lengthBox.value;
 
       const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       const lowerCase = "abcdefghijklmnopqrstuvwxyz";
