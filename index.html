@@ -21,18 +21,16 @@
 	  <label for="Numbers">Numbers</label>
 	  <input type="checkbox" id="Symbols" name="Symbols" value="Symbols">
 	  <label for="Symbols">Symbols</label>
-    </div>
-        
+	  <input type="number" id="Length" placeholder="Length of Password">
       </div>
     <script>
       const passwordBox = document.getElementById("passwordBox");
-
-      const length = 15;
 	  
 	  const upperCaseBox = document.getElementById("UpperCase");
 	  const lowerCaseBox = document.getElementById("LowerCase");
 	  const numberBox = document.getElementById("Numbers");
 	  const symbolBox = document.getElementById("Symbols");
+	  const lengthBox = document.getElementById("Length");
 	  
 	  upperCaseBox.checked = true;
 	  lowerCaseBox.checked = true;
@@ -43,6 +41,7 @@
 	  lowerCaseChecked = true;
 	  numberChecked = true;
 	  symbolChecked = true;
+	  length = 15;
 	  
       const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
       const lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -57,11 +56,10 @@
 	  lowerCaseBox.addEventListener('change', function(){lowerCaseChecked = this.checked})
 	  numberBox.addEventListener('change', function(){numberChecked = this.checked})
 	  symbolBox.addEventListener('change', function(){symbolChecked = this.checked})
-
-	  
-	  
+	  lengthBox.addEventListener('change', function(){length = this.value})
       
       function createPassword(){
+		
         let password = "";
 		if (upperCaseChecked == true) {
 			allChars += upperCase;
