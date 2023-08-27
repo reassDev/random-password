@@ -5,8 +5,8 @@
   box-sizing: border-box;
 }
 body {
-  background: #3b9ab3;
-  color: #fff;
+  background: #00000;
+  color: #E5E7E4;
 }
 .container {
   margin: 12%;
@@ -17,7 +17,7 @@ body {
   width: 100%;
   margin-top: 50px;
   margin-bottom: 30px;
-  background: #fff;
+  background: #E5E7E4;
   color: #000000;
   display: flex;
   align-items: center;
@@ -30,8 +30,8 @@ body {
   font-size: 45px;
 }
 .container h1 span {
-  color: #484cc1;
-  border-bottom: 4px solid #484cc1;
+  color: #737D79;
+  border-bottom: 4px solid #737D79;
   padding-bottom: 7px;
 }
 .display img {
@@ -50,7 +50,7 @@ body {
 .container button {
   border: 0;
   outline: 0;
-  background: #484cc1;
+  background: #C7CCC8;
   color: #fff;
   font-size: 22px;
   font-weight: 300;
@@ -62,11 +62,11 @@ body {
   cursor: pointer;
 }
 .Options {
-	background-color: #484cc1;
+	background-color: #111312;
 	padding: 50px;
 	border: 1;
 	border-style: solid;
-	border-color: #3821a5;
+	border-color: #111312;
 	border-width: 2px;
 	border-radius: 25px;
 	margin-bottom: 15px;
@@ -82,7 +82,7 @@ body {
   outline: 0;
   font-size: 16.5px;
   border: 1;
-  background-color: #FFFFFF;
+  background-color: #E5E7E4;
   border-style: solid;
   border-color: #000000;
   border-width: 2px;
